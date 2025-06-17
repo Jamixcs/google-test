@@ -12,11 +12,23 @@ function onSubmit() {
   formRef.value.validate().then((success) => {
     if (success) {
       // 第三方登入
+
+      google.accounts.id.initialize({
+        client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+        callback: handleCredentialResponse,
+      })
+      google.accounts.id.prompt()
+
       console.log('submit the login form!')
     } else {
       console.log('submit failed!!!')
     }
   })
+}
+
+function handleCredentialResponse() {
+  const idToken = response.credential
+  console.log('Encoded ID Token:', idToken)
 }
 </script>
 
