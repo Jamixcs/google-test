@@ -1,14 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/google-test/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/google-test/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+      default-src 'self';
+      script-src 'self' https://accounts.google.com/gsi/client;
+      frame-src 'self' https://accounts.google.com/gsi/;
+      connect-src 'self' https://accounts.google.com/gsi/;
+      style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style;
+      img-src 'self' data: https://www.google.com;
+      font-src 'self' https://fonts.gstatic.com;
+    "
+    />
     <title>Vite App</title>
-    <script type="module" crossorigin src="/google-test/assets/index-Y8MCoeya.js"></script>
+    <script type="module" crossorigin src="/google-test/assets/index-BVxFiZ0e.js"></script>
     <link rel="stylesheet" crossorigin href="/google-test/assets/index-DdqOPSKI.css">
   </head>
   <body>
     <div id="app"></div>
+    <script src="https://accounts.google.com/gsi/client" async></script>
   </body>
 </html>
